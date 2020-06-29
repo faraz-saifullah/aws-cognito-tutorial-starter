@@ -9,62 +9,61 @@ function validateForm(event, state) {
 
   if (state.hasOwnProperty("username") && state.username === "") {
     document.getElementById("username").classList.add("is-danger");
-    return { blankfield: true };
+    return { blankField: true };
   }
   if (state.hasOwnProperty("firstname") && state.firstname === "") {
     document.getElementById("firstname").classList.add("is-danger");
-    return { blankfield: true };
+    return { blankField: true };
   }
   if (state.hasOwnProperty("lastname") && state.lastname === "") {
     document.getElementById("lastname").classList.add("is-danger");
-    return { blankfield: true };
+    return { blankField: true };
   }
   if (state.hasOwnProperty("email") && state.email === "") {
     document.getElementById("email").classList.add("is-danger");
-    return { blankfield: true };
+    return { blankField: true };
   }
   if (
-    state.hasOwnProperty("verificationcode") &&
-    state.verificationcode === ""
+    state.hasOwnProperty("verificationCode") &&
+    state.verificationCode === ""
   ) {
-    document.getElementById("verificationcode").classList.add("is-danger");
-    return { blankfield: true };
+    document.getElementById("verificationCode").classList.add("is-danger");
+    return { blankField: true };
   }
   if (state.hasOwnProperty("password") && state.password === "") {
     document.getElementById("password").classList.add("is-danger");
-    return { blankfield: true };
+    return { blankField: true };
   }
-  if (state.hasOwnProperty("oldpassword") && state.oldpassword === "") {
-    document.getElementById("oldpassword").classList.add("is-danger");
-    return { blankfield: true };
+  if (state.hasOwnProperty("oldPassword") && state.oldPassword === "") {
+    document.getElementById("oldPassword").classList.add("is-danger");
+    return { blankField: true };
   }
-  if (state.hasOwnProperty("newpassword") && state.newpassword === "") {
-    document.getElementById("newpassword").classList.add("is-danger");
-    return { blankfield: true };
+  if (state.hasOwnProperty("newPassword") && state.newPassword === "") {
+    document.getElementById("newPassword").classList.add("is-danger");
+    return { blankField: true };
   }
-  if (state.hasOwnProperty("confirmpassword") && state.confirmpassword === "") {
-    document.getElementById("confirmpassword").classList.add("is-danger");
-    return { blankfield: true };
+  if (state.hasOwnProperty("confirmPassword") && state.confirmPassword === "") {
+    document.getElementById("confirmPassword").classList.add("is-danger");
+    return { blankField: true };
   }
   if (
     state.hasOwnProperty("password") &&
-    state.hasOwnProperty("confirmpassword") &&
-    state.password !== state.confirmpassword
+    state.hasOwnProperty("confirmPassword") &&
+    state.password !== state.confirmPassword
   ) {
     document.getElementById("password").classList.add("is-danger");
-    document.getElementById("confirmpassword").classList.add("is-danger");
-    return { passwordmatch: true };
+    document.getElementById("confirmPassword").classList.add("is-danger");
+    return { passwordMatch: true };
   }
   if (
-    state.hasOwnProperty("newpassword") &&
-    state.hasOwnProperty("confirmpassword") &&
-    state.newpassword !== state.confirmpassword
+    state.hasOwnProperty("newPassword") &&
+    state.hasOwnProperty("confirmPassword") &&
+    state.newPassword !== state.confirmPassword
   ) {
-    document.getElementById("newpassword").classList.add("is-danger");
-    document.getElementById("confirmpassword").classList.add("is-danger");
-    return { passwordmatch: true };
+    document.getElementById("newPassword").classList.add("is-danger");
+    document.getElementById("confirmPassword").classList.add("is-danger");
+    return { passwordMatch: true };
   }
-  return;
 }
 
 export default validateForm;

@@ -3,27 +3,29 @@ import React from "react";
 function FormErrors(props) {
   if (
     props.formerrors &&
-    (props.formerrors.blankfield || props.formerrors.passwordmatch)
+    (props.formerrors.blankField || props.formerrors.passwordMatch)
   ) {
     return (
       <div className="error container help is-danger">
         <div className="row justify-content-center">
-          {props.formerrors.passwordmatch
+          {props.formerrors.passwordMatch
             ? "Password value does not match confirm password value"
             : ""}
         </div>
         <div className="row justify-content-center help is-danger">
-          {props.formerrors.blankfield ? "All fields are required" : ""}
+          {props.formerrors.blankField ? "All fields are required" : ""}
         </div>
       </div>
     );
-  } else if (props.apierrors) {
+  }
+  if (props.apierrors) {
     return (
       <div className="error container help is-danger">
         <div className="row justify-content-center">{props.apierrors}</div>
       </div>
     );
-  } else if (props.formerrors && props.formerrors.cognito) {
+  }
+  if (props.formerrors && props.formerrors.cognito) {
     return (
       <div className="error container help is-danger">
         <div className="row justify-content-center">
@@ -31,9 +33,8 @@ function FormErrors(props) {
         </div>
       </div>
     );
-  } else {
-    return <div />;
   }
+  return <div />;
 }
 
 export default FormErrors;

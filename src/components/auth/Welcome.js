@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Welcome() {
   return (
@@ -8,5 +8,5 @@ export default function Welcome() {
         <p>You have successfully registered a new account.</p>
       </div>
     </section>
-  )
+  );
 }
